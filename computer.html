@@ -4,3 +4,155 @@
         <title>brodanappa website</title>
         <meta charset="UTF-8">
     </head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+    </style>
+    <style>
+        #sidebar {
+            width: 250px;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            background-color: #333;
+            color: #fff;
+            transition: left 0.3s ease-in-out;
+        }
+
+        #sidebar.folded {
+            left: 0;
+        }
+
+        #sidebar-header {
+            background-color: #222;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .menu-item {
+            padding: 10px;
+            border-bottom: 1px solid #444;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        #content {
+            margin-left: 0;
+            transition: margin-left 0.3s ease-in-out;
+        }
+
+        #sidebar.folded #content {
+            margin-left: 250px;
+        }
+    </style>
+</head>
+    <body>
+
+        <header>
+            <h1>Welkom op het hoofdmenu.</h1>
+        </header>
+        <div class="container">
+    <h1>Dit is de startpagina van mijn website. Hier vind je informatie over mij.</h1>
+<p>Mijn naam is Luuk en ik ben de maker van deze website.</p>
+<style>
+        #sidebar {
+            width: 250px;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            background-color: #333;
+            color: #fff;
+            transition: left 0.3s ease-in-out;
+        }
+
+        #sidebar.folded {
+            left: 0;
+        }
+
+        #sidebar-header {
+            background-color: #222;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .menu-item {
+            padding: 10px;
+            border-bottom: 1px solid #444;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        #content {
+            margin-left: 0;
+            transition: margin-left 0.3s ease-in-out;
+        }
+
+        #sidebar.folded #content {
+            margin-left: 250px;
+        }
+        a:link {
+            color: white;
+
+        }
+        a:visited {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div id="sidebar">
+    <div id="sidebar-header">
+        <h2>Menu</h2>
+    </div>
+    <div class="menu-item"><a href="index.html">Home</a></div>
+    <div class="menu-item"><a href="computer.html">Computers</a></div>
+    <div class="menu-item"><a href="#">kleurmodel</a></div>
+    <div class="menu-item"><a href="#">binair stelsel</a></div>
+</div>
+
+<div id="content">
+    <button onclick="toggleSidebar()">Menu</button>
+    
+</div>
+
+<script>
+    function toggleSidebar() {
+        var sidebar = document.getElementById('sidebar');
+        var content = document.getElementById('content');
+        sidebar.classList.toggle('folded');
+        content.classList.toggle('folded');
+    }
+</script>
+</html>
