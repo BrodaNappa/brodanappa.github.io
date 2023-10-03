@@ -3,42 +3,41 @@
     <head>
         <title>brodanappa website</title>
         <meta charset="UTF-8">
-    </head>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
 
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+                margin: 0;
+                padding: 0;
+            }
+    
+            header {
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                padding: 20px;
+            }
+    
+            h1 {
+                margin: 0;
+                padding: 0;
+            }
+    
+            .container {
+                max-width: 800px;
+                margin: 20px auto;
+                padding: 20px;
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+    
+            p {
+                font-size: 18px;
+                line-height: 1.6;
+            }
 
-        h1 {
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-    </style>
-    <style>
-        #sidebar {
+            #sidebar {
             width: 250px;
             height: 100%;
             position: fixed;
@@ -80,17 +79,11 @@
             text-align:center;
             padding:10px 0;    
         }
-    </style>
-</head>
-    <body>
 
-        <header>
-            <h1>Welkom op het hoofdmenu.</h1>
-        </header>
-        <div class="container">
-    <h1>Dit is de startpagina van mijn website. Hier vind je informatie over mij.</h1>
-<p>Mijn naam is Luuk en ik ben de maker van deze website.</p>
-<style>
+
+        </style>
+
+        <style>
         #sidebar {
             width: 250px;
             height: 100%;
@@ -135,8 +128,20 @@
             color: white;
         }
     </style>
-</head>
-</body>
+
+    </head>
+ 
+ 
+
+    <body>
+
+        <header>
+            <h1>Welkom op het hoofdmenu.</h1>
+        </header>
+        <div class="container">
+    <h1>Dit is de startpagina van mijn website. Hier vind je informatie over mij.</h1>
+<p>Mijn naam is Luuk en ik ben de maker van deze website.</p>
+
 
 <div id="sidebar">
     <div id="sidebar-header">
@@ -152,6 +157,13 @@
     <button onclick="toggleSidebar()">Menu</button>
     
 </div>
+
+
+<footer>
+    <p>&copy 2023 Brodanappa</p>
+</footer>
+</body>
+
 
 <script>
     function toggleSidebar() {
