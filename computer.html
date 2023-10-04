@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
     </head>
     <style>
-        body {
+        main {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             margin: 0;
@@ -13,10 +13,25 @@
         }
 
         header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
+             background-color: #333;
+              color: #fff;
+              display: flex;
+              justify-content:center;
+              align-items: center;
+              padding: 20px;
+            }
+
+
+         #menuButton {
+             background-color: transparent;
+             border: none;
+              font-size: 24px;
+              cursor: pointer;
+              color: #fff;
+         }
+
+        #menuButton:hover {
+            text-decoration: underline;
         }
 
         h1 {
@@ -121,41 +136,47 @@
 </head>
 <body>
     <header>
+        <button id="menuButton" onclick="toggleSidebar()">☰</button>
         <h1>Computers</h1>
     </header>
-<div class="container">
-<h1>Hier vind je informatie over computers.</h1>
-<p>Een computer is een complex apparaat dat verschillende componenten en processen combineert om informatie te verwerken en taken uit te voeren. Hier is een vereenvoudigde uitleg van hoe een computer werkt, geschikt voor een website:</p>
+    <main>
+        <div class="container">
+        <h1>Hier vind je informatie over computers.</h1>
+        <p>Een computer is een complex apparaat dat verschillende componenten en processen combineert om informatie te verwerken en taken uit te voeren. Hier is een vereenvoudigde uitleg van hoe een computer werkt, geschikt voor een website:</p>
 
-<p>1. Invoer: Een computer begint met het ontvangen van gegevens van verschillende bronnen, zoals toetsenborden, muizen, aanraakschermen, microfoons, camera's en sensoren. Deze gegevens worden omgezet in digitale informatie die de computer kan begrijpen.</p>
+        <p>1. Invoer: Een computer begint met het ontvangen van gegevens van verschillende bronnen, zoals toetsenborden, muizen, aanraakschermen, microfoons, camera's en sensoren. Deze gegevens worden omgezet in digitale informatie die de computer kan begrijpen.</p>
 
-<p>2. Opslag: Computers hebben opslagmedia, zoals harde schijven en solid-state drives (SSD's), waarop gegevens worden opgeslagen. Dit kunnen programma's, bestanden, afbeeldingen, video's en meer zijn.</p>
+        <p>2. Opslag: Computers hebben opslagmedia, zoals harde schijven en solid-state drives (SSD's), waarop gegevens worden opgeslagen. Dit kunnen programma's, bestanden, afbeeldingen, video's en meer zijn.</p>
 
-<p>3. Verwerking: De centrale verwerkingseenheid (CPU) van de computer is verantwoordelijk voor het uitvoeren van berekeningen en het verwerken van gegevens. Dit omvat het uitvoeren van instructies van programma's en het manipuleren van gegevens.</p>
+        <p>3. Verwerking: De centrale verwerkingseenheid (CPU) van de computer is verantwoordelijk voor het uitvoeren van berekeningen en het verwerken van gegevens. Dit omvat het uitvoeren van instructies van programma's en het manipuleren van gegevens.</p>
 
-<p>4. Geheugen: Computers hebben RAM (Random Access Memory) voor tijdelijke gegevensopslag. Hier worden gegevens en instructies geladen die op dat moment door de CPU worden gebruikt.</p>
+        <p>4. Geheugen: Computers hebben RAM (Random Access Memory) voor tijdelijke gegevensopslag. Hier worden gegevens en instructies geladen die op dat moment door de CPU worden gebruikt.</p>
 
-<p>5. Uitvoer: De computer geeft resultaten weer op verschillende manieren, zoals op een beeldscherm, via luidsprekers, via een printer, enzovoort. Dit is hoe we de informatie begrijpen die door de computer wordt gegenereerd.</p>
+        <p>5. Uitvoer: De computer geeft resultaten weer op verschillende manieren, zoals op een beeldscherm, via luidsprekers, via een printer, enzovoort. Dit is hoe we de informatie begrijpen die door de computer wordt gegenereerd.</p>
 
-<p>6. Besturingssysteem: De meeste computers draaien een besturingssysteem, zoals Windows, macOS of Linux. Het besturingssysteem beheert hardwarebronnen, voert programma's uit en biedt een gebruikersinterface voor interactie met de computer.</p>
+        <p>6. Besturingssysteem: De meeste computers draaien een besturingssysteem, zoals Windows, macOS of Linux. Het besturingssysteem beheert hardwarebronnen, voert programma's uit en biedt een gebruikersinterface voor interactie met de computer.</p>
 
-<p>7. Software: Programma's en applicaties zijn software die specifieke taken uitvoeren. Ze worden geschreven in programmeertalen en kunnen variëren van tekstverwerkers tot videobewerkingssoftware en games.</p>
-<h1>Ik hoop dat dit heeft geholpen met het begrijpen van een computer</h1>
+        <p>7. Software: Programma's en applicaties zijn software die specifieke taken uitvoeren. Ze worden geschreven in programmeertalen en kunnen variëren van tekstverwerkers tot videobewerkingssoftware en games.</p>
+        <h1>Ik hoop dat dit heeft geholpen met het begrijpen van een computer</h1>
 
-<div id="sidebar">
-    <div id="sidebar-header">
-        <h2>Menu</h2>
-    </div>
-    <div class="menu-item"><a href="index.html">Home</a></div>
-    <div class="menu-item"><a href="computer.html">Computers</a></div>
-    <div class="menu-item"><a href="#">kleurmodel</a></div>
-    <div class="menu-item"><a href="#">binair stelsel</a></div>
-</div>
+        <div id="sidebar">
+            <div id="sidebar-header">
+                <h2>Menu</h2>
+            </div>
+            <div class="menu-item"><a href="index.html">Home</a></div>
+            <div class="menu-item"><a href="computer.html">Computers</a></div>
+            <div class="menu-item"><a href="#">kleurmodel</a></div>
+            <div class="menu-item"><a href="#">binair stelsel</a></div>
+        </div>
 
-<div id="content">
-    <button onclick="toggleSidebar()">Menu</button>
-    
-</div>
+        <div id="content">
+            <button onclick="toggleSidebar()">Menu</button>
+            
+        </div>
+    </main>
+    <footer>
+        <p>&copy 2023 Brodanappa</p>
+    </footer>
 </body>
 <script>
     function toggleSidebar() {
