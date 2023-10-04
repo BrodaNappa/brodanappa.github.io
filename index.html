@@ -13,11 +13,25 @@
             }
     
             header {
-                background-color: #333;
-                color: #fff;
-                text-align: center;
-                padding: 20px;
-            }
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+#menuButton {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+#menuButton:hover {
+    text-decoration: underline;
+}
     
             h1 {
                 margin: 0;
@@ -128,36 +142,34 @@
     </head>
  
     <body>
-    <main>
+      <main>
 
-        <header>
-            <h1>Welkom op het hoofdmenu.</h1>
-        </header>
-        <div class="container">
-    <h1>Dit is de startpagina van mijn website. Hier vind je informatie over mij.</h1>
-<p>Mijn naam is Luuk en ik ben de maker van deze website.</p>
+          <header>
+              <button id="menuButton" onclick="toggleSidebar()">☰ Menu</button>
+              <h1>Welkom op het hoofdmenu.</h1>
+          </header>
+
+          <div class="container">
+      	<h1>Dit is de startpagina van mijn website. Hier vind je informatie over mij.		</h1>
+  <p>Mijn naam is Luuk en ik ben de maker van deze website.</p>
 
 
-<div id="sidebar">
-    <div id="sidebar-header">
-        <h2>Menu</h2>
-    </div>
-    <div class="menu-item"><a href="index.html">Home</a></div>
-    <div class="menu-item"><a href="computer.html">Computers</a></div>
-    <div class="menu-item"><a href="#">kleurmodel</a></div>
-    <div class="menu-item"><a href="#">binair stelsel</a></div>
-</div>
+  <div id="sidebar">
+      <div id="sidebar-header">
+          <h2>Menu</h2>
+      </div>
+      <div class="menu-item"><a href="index.html">Home</a></div>
+      <div class="menu-item"><a href="computer.html">Computers</a></div>
+      <div class="menu-item"><a href="#">kleurmodel</a></div>
+      <div class="menu-item"><a href="#">binair stelsel</a></div>
+  </div>
 
-<div id="content">
-    <button onclick="toggleSidebar()">Menu</button>
-    
-</div>
 
-</main>
+  </main>
 
-<footer>
-    <p>&copy 2023 Brodanappa</p>
-</footer>
+  <footer>
+      <p>&copy 2023 Brodanappa</p>
+  </footer>
 </body>
 
 
@@ -173,8 +185,3 @@
 </script>
 
 </html>
-
-
-
-
-
