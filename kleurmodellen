@@ -149,7 +149,7 @@
             
             <button id="menuButton" onclick="toggleSidebar()">☰</button>
             
-            <h1>Welkom op het hoofdmenu.</h1>
+            <h1>kleurmodellen</h1>
         </header>
 
         <div class="container">
