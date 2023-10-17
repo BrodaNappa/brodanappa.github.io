@@ -175,9 +175,6 @@
   </footer>
 </body>
 
-
-
-
 <script>
     function toggleSidebar() {
         var sidebar = document.getElementById('sidebar');
@@ -185,6 +182,19 @@
         sidebar.classList.toggle('folded');
         content.classList.toggle('folded');
     }
+
+    function changeBackgroundColor() {
+        const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+        let currentIndex = 0;
+        const body = document.body;
+
+        setInterval(function () {
+            body.style.backgroundColor = colors[currentIndex];
+            currentIndex = (currentIndex + 1) % colors.length;
+        }, 2000); 
+    }
+
+    changeBackgroundColor();
 </script>
 
 </html>
