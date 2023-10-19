@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>brodanappa website</title>
+        <meta charset="UTF-8">
+
+        <style>
+            main {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+    
+            header {
+                background-color: #333;
+                color: #fff;
+                display: flex;
+                justify-content:center;
+                align-items: center;
+                padding: 20px;
+            }
+
+
+            #menuButton {
+                background-color: transparent;
+                border: none;
+                font-size: 24px;
+                cursor: pointer;
+                color: #fff;
+            }
+
+            #menuButton:hover {
+                text-decoration: underline;
+            }
+                
+            h1 {
+                margin: 0;
+                padding: 0;
+            }
+    
+            .container {
+                max-width: 800px;
+                margin: 20px auto;
+                padding: 20px;
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+    
+            p {
+                font-size: 18px;
+                line-height: 1.6;
+            }
+
+            #sidebar {
+            width: 250px;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            background-color: #333;
+            color: #fff;
+            transition: left 0.3s ease-in-out;
+        }
+
+        #sidebar.folded {
+            left: 0;
+        }
+
+        #sidebar-header {
+            background-color: #222;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .menu-item {
+            padding: 10px;
+            border-bottom: 1px solid #444;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        #content {
+            margin-left: 0;
+            transition: margin-left 0.3s ease-in-out;
+        }
+
+        #sidebar.folded #content {
+            margin-left: 250px;
+        }
+        footer {
+            background-color:#333;
+            color:white;
+            text-align:center;
+            padding:10px 0;    
+        }
+
+        #sidebar {
+            width: 250px;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            background-color: #333;
+            color: #fff;
+            transition: left 0.3s ease-in-out;
+        }
+
+        #sidebar.folded {
+            left: 0;
+        }
+
+        #sidebar-header {
+            background-color: #222;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .menu-item {
+            padding: 10px;
+            border-bottom: 1px solid #444;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        #content {
+            margin-left: 0;
+            transition: margin-left 0.3s ease-in-out;
+        }
+
+        #sidebar.folded #content {
+            margin-left: 250px;
+        }
+        a:link {
+            color: white;
+
+        }
+        a:visited {
+            color: white;
+        }
+        
+        
+        .light-theme {
+            background-color: #fff;
+            color: #333;
+        }
+
+        .dark-theme {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .theme-switch-label {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+            color: #333;
+        }
+
+        .dark-theme .theme-switch-label {
+            color: #fff;
+        }
+
+    </style>
+
+    </head>
+ 
+    <body style="background-color:grey;">
+      <main>
+
+        <header>
+            
+            <button id="menuButton" onclick="toggleSidebar()">☰</button>
+            
+            <h1>Settings</h1>
+        </header>
+
+        <div class="container">
+      	<h1></h1>
+
+        <div id="sidebar">
+            <div id="sidebar-header">
+                <h2>Menu</h2>
+            </div>
+            <div class="menu-item"><a href="index.html">Home</a></div>
+            <div class="menu-item"><a href="computer.html">Computers</a></div>
+            <div class="menu-item"><a href="kleurmodellen.html">kleurmodellen</a></div>
+            <div class="menu-item"><a href="binaire stelsel.html">binair stelsel</a></div>
+            <div class="menu-item"><a href="compressietechniek.html">compressietechniek</a></div>
+        </div>
+
+<form id="settings-form">
+<label for="theme">Kies een thema:</label>
+<select id="theme">
+    <option value="light">Licht thema</option>
+    <option value="dark">Donker thema</option>
+</select>
+</form>
+
+  </main>
+
+  <footer>
+      <p>&copy 2023 Brodanappa</p>
+  </footer>
+</body>
+
+
+
+
+<script>
+    function toggleSidebar() {
+        var sidebar = document.getElementById('sidebar');
+        var content = document.getElementById('content');
+        sidebar.classList.toggle('folded');
+        content.classList.toggle('folded');
+    }
+    document.getElementById('settings-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        const theme = document.getElementById('theme').value;
+        localStorage.setItem('theme', theme);
+        alert('Instellingen opgeslagen!');
+    });
+
+    
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        document.getElementById('theme').value = savedTheme;
+    }
+    
+    const themeSwitch = document.getElementById('theme-switch');
+const body = document.body;
+
+themeSwitch.addEventListener('change', function () {
+    if (themeSwitch.checked) {
+        body.classList.add('dark-theme');
+        body.classList.remove('light-theme');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        body.classList.add('light-theme');
+        body.classList.remove('dark-theme');
+        localStorage.setItem('theme', 'light');
+    }
+});
+
+const userTheme = localStorage.getItem('theme');
+if (userTheme === 'dark') {
+    themeSwitch.checked = true;
+    body.classList.add('dark-theme');
+}
+
+</script>
+
+</html>
+
